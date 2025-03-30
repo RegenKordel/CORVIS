@@ -1,0 +1,9 @@
+[package]
+name = "ollama-rs-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ollama-rs = "0.3.0"
+tokio = { version = "1.44.1", features = ["full"] }
+tokio-stream = "0.1.17"
