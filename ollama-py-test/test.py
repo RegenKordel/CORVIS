@@ -1,7 +1,12 @@
-from ollama import chat
+from ollama import Client
 from ollama import ChatResponse
 
-response: ChatResponse = chat(model='gemma3:12b', messages=[
+c = Client(
+  host='http://BigChungus:11434',
+  headers={'x-some-header': 'some-value'}
+)
+
+response: ChatResponse = c.chat(model='gemma3:12b', messages=[
   {
     'role': 'user',
     'content': 'Why is the sky blue?',
